@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Game from './Game';
+import Help from './Help';
 import './App.css';
+import './VideoBackground.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [showHelp, setShowHelp] = useState(false);
+
+    const toggleHelp = () => {
+        setShowHelp(!showHelp);
+    };
+
+    return (
+        <div className="App">
+            <video autoPlay muted loop id="background-video">
+                <source src="water.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div className="content">
+                {showHelp ? <Help /> : <Game />}
+                <button onClick={toggleHelp} className="help-button">Help</button>
+            </div>
+        </div>
+    );
 }
 
 export default App;

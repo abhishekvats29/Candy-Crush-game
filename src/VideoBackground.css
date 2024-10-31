@@ -1,0 +1,145 @@
+body, html {
+    height: 100%;
+    margin: 0;
+     /* Allow scrolling */
+    
+    justify-content: center;
+    align-items: center;
+    /*background: url('/your-image-file.jpg') no-repeat center center fixed;*/
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white; /* Adjust based on your content visibility needs */
+    width: 100%;
+    min-height: 100vh; /* Ensure the content container is at least the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px; /* Add some padding at the bottom */
+    
+}
+
+.game {
+    margin: auto; /* Automatically adjust margins to center */
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensure content is centered vertically */
+    min-height: 50vh; /* Ensure a minimum height for better centering */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    max-height: 95vh;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4px;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 15px;
+    
+}
+
+.candy {
+    width: 90%;
+    height: 40px;
+    border-radius: 10%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.candy:active {
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 15px;
+}
+.game-button {
+    background: linear-gradient(135deg, #6e3b6e, #b06ab3);
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    
+}
+
+.game-button:hover {
+    background: linear-gradient(135deg, hsl(298, 94%, 18%), #6e3b6e);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.help {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    display: block;
+    margin-top: 10px; /* Adjust the top margin for better spacing */
+    text-align: center;
+}
+
+.game-message {
+    margin-top: 10px;
+    font-size: 24px;
+    color: gold;
+}
+
+.score {
+    margin-top: 10px;
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .game {
+        width: 90%;
+    }
+
+    .candy {
+        height: 30px;
+    }
+
+    .game-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
