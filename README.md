@@ -8,7 +8,7 @@
 #### Clearing Candies: Matched candies will disappear, and new candies will fall from the top to fill the gaps.
 ## Winning Criteria
 #### Score Goal: Score 100 points to win the game.
-### Win Message: A "Congratulations!" message will appear once you hit the target score.
+#### Win Message: A "Congratulations!" message will appear once you hit the target score.
 
 ## Technology Used
 ### Frontend
